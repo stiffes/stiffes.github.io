@@ -1,55 +1,8 @@
-<div style="display: flex; flex-direction: column; align-items: center; width: 80%; margin: auto;">
-  <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
-       padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em;
-       margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
-    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
-      src="https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-    </iframe>
-  </div>
-  
-  <a href="https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/view?utm_content=DAGVKJ6MN7I&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">View on Canva</a>
-  
-  <!-- Download PDF link -->
-  <a href="https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/download/pdf" target="_blank" rel="noopener" style="margin-top: 1em; padding: 10px 15px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">
-    Download PDF
-  </a>
-  
-  <!-- Convert to PDF button -->
-  <button onclick="convertToPDF()" style="margin-top: 1em; padding: 10px 15px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
-    Convert to PDF
-  </button>
+<div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
 </div>
-
-<script>
-  function convertToPDF() {
-    const apiKey = 'sk_356c6292375d89620f6a44ce3c59981b33a372a0'; // Replace with your PDFShift API key
-    const url = 'https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/view?embed'; // URL to convert
-
-    fetch('https://api.pdfshift.io/v3/convert', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + apiKey
-      },
-      body: JSON.stringify({
-        source: url,
-        // Optional settings
-        pdf_password: '', // Set a password if needed
-        // additional settings can be added here
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        // Open the generated PDF in a new window
-        window.open(data.pdf_url, '_blank');
-      } else {
-        alert('Error converting to PDF: ' + data.message);
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Failed to convert to PDF. Please try again later.');
-    });
-  }
-</script>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGVKJ6MN7I&#x2F;d1wDgJPSwm4h7exPJSzy7w&#x2F;view?utm_content=DAGVKJ6MN7I&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">White Simple Web Developer Resume</a> by Stefan Stensson
