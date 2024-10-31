@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<body style="background-color:#0d121;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Stefan Stensson</title>
+    <title>Centered Canva Embed with Fade-In</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,9 +12,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #0d1216; /* Set background color to black */
+            background-color: #000000; /* Set background color to black */
             min-height: 100vh; /* Ensure full height for the body */
             justify-content: center; /* Center content vertically */
+            opacity: 0; /* Start with invisible */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
         }
         .embed-container {
             position: relative;
@@ -25,7 +26,7 @@
             max-height: 1080px; /* Max height for larger screens */
             overflow: hidden;
             border-radius: 8px; /* Optional: rounded corners */
-            background-color: #0d1216; /* Ensure background color matches the body */
+            background-color: #000000; /* Ensure background color matches the body */
         }
         .embed-container iframe {
             position: absolute;
@@ -38,6 +39,16 @@
             margin: 0;
             transform: scale(1); /* Ensure the iframe is not zoomed in */
             transform-origin: top left; /* Start the scale from the top left */
+        }
+
+        /* Fade-in keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Start from invisible */
+            }
+            to {
+                opacity: 1; /* End at fully visible */
+            }
         }
     </style>
 </head>
