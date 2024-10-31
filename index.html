@@ -13,6 +13,8 @@
             flex-direction: column;
             align-items: center;
             background-color: #f5f5f5;
+            min-height: 100vh; /* Ensure full height for the body */
+            justify-content: center; /* Center content vertically */
         }
         .embed-container {
             position: relative;
@@ -38,19 +40,6 @@
             transform: scale(1); /* Ensure the iframe is not zoomed in */
             transform-origin: top left; /* Start the scale from the top left */
         }
-        .download-link, .view-link {
-            margin-top: 1em;
-            padding: 10px 15px;
-            background-color: #4CAF50; /* Green background for buttons */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .download-link:hover, .view-link:hover {
-            background-color: #45a049; /* Darker green on hover */
-        }
         @media (max-width: 600px) {
             .embed-container {
                 height: 400px; /* Adjust height for smaller screens */
@@ -67,14 +56,6 @@
             allow="fullscreen">
         </iframe>
     </div>
-
-    <a href="https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/view?utm_content=DAGVKJ6MN7I&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
-       target="_blank" rel="noopener" 
-       class="view-link">View on Canva</a>
-
-    <a href="https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/download/pdf" 
-       target="_blank" rel="noopener" 
-       class="download-link">Download PDF</a>
 
 </body>
 </html>
