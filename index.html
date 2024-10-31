@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Canva Embed</title>
+    <title>Canva Embed</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,8 +19,8 @@
         .embed-container {
             position: relative;
             width: 100%;
-            max-width: 800px; /* Maximum width for larger screens */
-            height: 600px; /* Fixed height to fit the design */
+            max-width: 1920px; /* Maximum width for larger screens (1080p) */
+            height: 1080px; /* Fixed height for 1080p display */
             box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
             margin-top: 1.6em;
             margin-bottom: 0.9em;
@@ -39,11 +39,6 @@
             margin: 0;
             transform: scale(1); /* Ensure the iframe is not zoomed in */
             transform-origin: top left; /* Start the scale from the top left */
-        }
-        @media (max-width: 600px) {
-            .embed-container {
-                height: 400px; /* Adjust height for smaller screens */
-            }
         }
     </style>
 </head>
