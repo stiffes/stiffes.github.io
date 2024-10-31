@@ -22,8 +22,34 @@
 
 <script>
   function convertToPDF() {
-    // This function could trigger a conversion process
-    // Note: Actual implementation will depend on the library or service used for conversion
-    alert('Convert to PDF feature not implemented in this example.');
+    const apiKey = 'sk_356c6292375d89620f6a44ce3c59981b33a372a0'; // Replace with your PDFShift API key
+    const url = 'https://www.canva.com/design/DAGVKJ6MN7I/d1wDgJPSwm4h7exPJSzy7w/view?embed'; // URL to convert
+
+    fetch('https://api.pdfshift.io/v3/convert', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + apiKey
+      },
+      body: JSON.stringify({
+        source: url,
+        // Optional settings
+        pdf_password: '', // Set a password if needed
+        // additional settings can be added here
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        // Open the generated PDF in a new window
+        window.open(data.pdf_url, '_blank');
+      } else {
+        alert('Error converting to PDF: ' + data.message);
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Failed to convert to PDF. Please try again later.');
+    });
   }
 </script>
